@@ -1,52 +1,68 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Receipt {
-    private List<Customer>customers=new ArrayList<>();
-    private int newNumber;
-    private int oldNumber;
+    private int id;
+    private Customer customer;
+    private int oldElectricNumber;
+    private int newElectricNumber;
+    private int payableAmount;
 
-    public Receipt() {
-        this.customers = customers;
-        this.newNumber = newNumber;
-        this.oldNumber = oldNumber;
+
+    public Receipt(int id, Customer customer, int oldElectricNumber, int newElectricNumber, int payableAmount) {
+        this.id = id;
+        this.customer = customer;
+        this.oldElectricNumber = oldElectricNumber;
+        this.newElectricNumber = newElectricNumber;
+        this.payableAmount = payableAmount;
     }
 
-    public int getNewNumber() {
-        return newNumber;
+    public int getId() {
+        return id;
     }
 
-    public void setNewNumber(int newNumber) {
-        this.newNumber = newNumber;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getOldNumber() {
-        return oldNumber;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setOldNumber(int oldNumber) {
-        this.oldNumber = oldNumber;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public List<Customer> getCustomers() {
-        return customers;
+    public int getOldElectricNumber() {
+        return oldElectricNumber;
     }
 
-    public void setCustomers(List<Customer> customers) {
-        this.customers = customers;
+    public void setOldElectricNumber(int oldElectricNumber) {
+        this.oldElectricNumber = oldElectricNumber;
+    }
+
+
+    public int getNewElectricNumber() {
+        return newElectricNumber;
+    }
+
+    public void setNewElectricNumber(int newElectricNumber) {
+        this.newElectricNumber = newElectricNumber;
+    }
+
+    public int getPayableAmount() {
+        return payableAmount;
+    }
+
+    public void setPayableAmount(int payableAmount) {
+        this.payableAmount = payableAmount;
     }
 
     @Override
     public String toString() {
         return "Receipt{" +
-                "customers=" + customers +
-                ", newNumber=" + newNumber +
-                ", oldNumber=" + oldNumber +
+                "id=" + id +
+                ", customer=" + customer +
+                ", oldElectricNumber=" + oldElectricNumber +
+                ", getNewElectricNumber=" + newElectricNumber +
+                ", payableAmount=" + payableAmount +
                 '}';
     }
-    public void add(Customer c){
-        customers.add(c);
-        System.out.println(c.toString());
-    }
-
 }
