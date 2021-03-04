@@ -36,6 +36,7 @@ public class Main {
                 rm.showAll();
                 break;
             case 0:
+                continue;
         }
     }while (true);
 }
